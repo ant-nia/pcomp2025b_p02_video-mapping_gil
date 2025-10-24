@@ -264,6 +264,43 @@ section {
   letter-spacing: 0.05em;
 }
 
+/* ===== IMÁGENES MARGINALES ===== */
+/* Pequeñas, flotantes en los márgenes */
+
+.margin-image {
+  position: absolute;
+  width: 200px;
+  height: 280px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.margin-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  filter: grayscale(1) contrast(1.2);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.margin-image:hover img {
+  opacity: 1;
+  filter: grayscale(0) contrast(1);
+  transform: scale(1.05);
+}
+
+/* Posiciones */
+.margin-right {
+  right: -100px;
+  top: 15%;
+}
+
+.margin-left {
+  left: -100px;
+  top: 20%;
+}
+
 /* ===== GRIDS DE 2 COLUMNAS ===== */
 
 .two-column, .bio-grid, .social-content {
